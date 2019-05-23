@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{3A77B662-4C21-4B53-A517-964266A31AC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F18F325B-B342-4AD5-AD31-E92E2F3F1ABA}"
+	ProjectSection(SolutionItems) = preProject
+		.filenesting.json = .filenesting.json
+		WebApplication1\wwwroot\favicon.ico = WebApplication1\wwwroot\favicon.ico
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiraDemo", "JiraDemo\JiraDemo.csproj", "{6C8ABF81-0A6A-4320-958A-8405AC5A5CA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A77B662-4C21-4B53-A517-964266A31AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A77B662-4C21-4B53-A517-964266A31AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A77B662-4C21-4B53-A517-964266A31AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A77B662-4C21-4B53-A517-964266A31AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C8ABF81-0A6A-4320-958A-8405AC5A5CA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C8ABF81-0A6A-4320-958A-8405AC5A5CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C8ABF81-0A6A-4320-958A-8405AC5A5CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C8ABF81-0A6A-4320-958A-8405AC5A5CA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CADD7E0-7B98-446D-B5C2-412B70A9324D}
+	EndGlobalSection
+EndGlobal

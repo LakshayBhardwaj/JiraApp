@@ -1,0 +1,65 @@
+﻿@page
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Index</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/filters.css" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript" src="~/js/script.js"></script>
+    <script type="text/javascript" src="~/js/dropDown.js"></script>
+</head>
+<body style="margin:0; background-color:#252525">
+    <div style="width:100%; height:60px;">
+        <div class="dropdown" id="p12">
+            <button onclick="myFunction()" class="dropbtn">Dropdown<span class="glyphicon glyphicon-chevron-down" style="padding:0px 5px;"></span></button>
+            <div id="myDropdown" class="dropdown-content">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                <div style="display:flex;">
+                    <input type="checkbox" style="margin:15px 0px 0px 10px;" value="PROJ" id="checkbox1" class="project"><a href="#project1" class="link" id="link1">Project1</a>
+                </div>
+                <div style="display:flex;">
+                    <input type="checkbox" style="margin:15px 0px 0px 10px;" value="PRO2" id="checkbox2" class="project"><a href="#project2" class="link" id="link2">Project2</a>
+                </div>
+                <div style="display:flex;">
+                    <input type="checkbox" style="margin:15px 0px 0px 10px;" value="TES" id="checkbox3" class="project"><a href="#Testing1" class="link" id="link3">Testing1</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="width:100%; height:auto;">
+        <div style="width:auto; margin:0 14px; display:flex;">
+            <div style="margin:0 5px 10px 0; width:50%; height:auto; position:relative;">
+                <div style="width:100%; height:237px; background-color:#353535; margin-bottom:10px; position:absolute; top:0; left:0;">
+                    <div id="piechart" style="width: 690px; height: 230px;"></div>
+                </div>
+                <div style="width:100%; height:288px; background-color:#353535; margin-bottom:10px; position:absolute; top:247px; left:0;">
+
+                </div>
+                <div style="width:100%; height:288px; background-color:#353535; margin-bottom:10px; position:absolute; top:545px; left:0;">
+
+                </div>
+            </div>
+            <div style="margin:0 0 10px 5px; width:50%; height:auto; position:relative;">
+                <div style="width:100%; height:414px; background-color:#353535; margin-bottom:10px; position:absolute; top:0; left:0;">
+
+                </div>
+                <div style="width:100%; height:410px; background-color:#353535; margin-bottom:10px; position:absolute; top:424px; left:0;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ghibli App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="~/css/style.css" rel="stylesheet">
+    <link href="~/css/filters.css" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="~/js/script1.js"></script>
+
+</head>
+
+@*<script type="text/javascript" src="~/js/script1.js"></script>*@
+
+<script type="text/javascript" src="~/js/dropDown.js"></script>
+<div style="width:100%; margin:5px;">
+    <div class="dropdown" id="p12">
+        <button onclick="myFunction('0')" class="dropbtn">Project<span class="glyphicon glyphicon-chevron-down" style="padding:0px 5px;"></span></button>
+        <div id="myDropdown0" class="dropdown-content">
+            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+            <div style="display:flex;">
+                <input type="checkbox" style="margin:15px 0px 0px 10px;" value="PROJ" id="checkbox01" class="project"><a href="#project1" class="link" id="link01">Project1</a>
+            </div>
+            <div style="display:flex;">
+                <input type="checkbox" style="margin:15px 0px 0px 10px;" value="PRO2" id="checkbox02" class="project"><a href="#project2" class="link" id="link02">Project2</a>
+            </div>
+            <div style="display:flex;">
+                <input type="checkbox" style="margin:15px 0px 0px 10px;" value="TES" id="checkbox03" class="project"><a href="#Testing1" class="link" id="link03">Testing1</a>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown" id="p13">
+        <button onclick="myFunction('1')" class="dropbtn">Type<span class="glyphicon glyphicon-chevron-down" style="padding:0px 5px;"></span></button>
+        <div id="myDropdown1" class="dropdown-content">
+            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+            <div style="display:flex;">
+                <input type="checkbox" style="margin:15px 0px 0px 10px;" value="Bug" id="checkbox11" class="project"><a href="#bug" class="link" id="link11">Bug</a>
+            </div>
+            <div style="display:flex;">
+                <input type="checkbox" style="margin:15px 0px 0px 10px;" value="Epic" id="checkbox12" class="project"><a href="#epic" class="link" id="link12">Epic</a>
+            </div>
+            <div style="display:flex;">
+                <input type="checkbox" style="margin:15px 0px 0px 10px;" value="Improvement" id="checkbox13" class="project"><a href="#improvement" class="link" id="link13">Improvement</a>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown" id="p14">
+        <button onclick="myFunction('2')" class="dropbtn">Status<span class="glyphicon glyphicon-chevron-down" style="padding:0px 5px;"></span></button>
+        <div id="myDropdown2" class="dropdown-content">
+            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+            <div style="display:flex;">
+                <input type="checkbox" style="margin:15px 0px 0px 10px;" value="In Progress" id="checkbox21" class="project"><a href="#inProgress" class="link" id="link21">In Progress</a>
+            </div>
+            <div style="display:flex;">
+                <input type="checkbox" style="margin:15px 0px 0px 10px;" value="To Do" id="checkbox22" class="project"><a href="#toDo" class="link" id="link22">To Do</a>
+            </div>
+            <div style="display:flex;">
+                <input type="checkbox" style="margin:15px 0px 0px 10px;" value="Backlog" id="checkbox23" class="project"><a href="#backlog" class="link" id="link23">Backlog</a>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown" id="p15">
+        <button onclick="myFunction('3')" class="dropbtn">Assignee<span class="glyphicon glyphicon-chevron-down" style="padding:0px 5px;"></span></button>
+        <div id="myDropdown3" class="dropdown-content">
+            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+            <div style="display:flex;">
+                <input type="checkbox" style="margin:15px 0px 0px 10px;" value="thinksysuser" id="checkbox31" class="project"><a href="#thinksysuser" class="link" id="link31">thinksysuser</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="width:100%;">
+    <div id="pie" style="width: 900px; height: 500px;">
+
+    </div>
+</div>
