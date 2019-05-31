@@ -54,6 +54,7 @@ function runApi(x) {
             htmlContent += "</table>";
 
             document.getElementById("pie").innerHTML = htmlContent;
+            loadchart(response);
         },
         error: function (response) { console.log(response); },
         failure: function (response) { debugger; }
@@ -61,4 +62,46 @@ function runApi(x) {
 }
 
 runApi('');
+
+function loadchart(obj) {
+
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Project Name');
+        data.addColumn('number', 'No. Of Issues');
+
+        var projectNames = new Array();
+        var uniqueProjectNames = new Array();
+        var count = new Array();
+
+        for (var i = 0; i < obj.issue.length; i++) {
+            uniqueProjectNames.push(obj.issue[i].ProjectName);
+            count.push(obj.issue[i].NoOfIssues);
+        }
+
+        for (var j = 0; j < uniqueProjectNames.length; j++) {
+
+            data.addRows([[uniqueProjectNames[j], count[j]]]);
+        }
+        console.log(projectNames);
+        console.log(count[uniqueProjectNames[1]]);
+
+
+        var options = {
+            title: 'title',
+           
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+    }
+
+}
+
+
 

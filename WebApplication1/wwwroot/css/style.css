@@ -31,6 +31,11 @@ table {
     width: 100%;
 }
 
+tbody {
+    height:100px;
+    overflow:auto;
+}
+
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
