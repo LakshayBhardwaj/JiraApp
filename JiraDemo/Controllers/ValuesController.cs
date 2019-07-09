@@ -61,7 +61,7 @@ namespace JiraDemo.Controllers
             client.Credentials = new NetworkCredential("thinksysuser", "thinksys@123");
             string credentials = Convert.ToBase64String(Encoding.ASCII.GetBytes("thinksysuser:thinksys@123"));
             client.Headers[HttpRequestHeader.Authorization] = string.Format("Basic ", credentials);
-            var response = client.DownloadString("http://10.101.21.116:8080/rest/api/2/search?jql="+filter.getFilter);
+            var response = client.DownloadString("http://10.101.10.110:8080/rest/api/2/search?jql=" + filter.getFilter);
             var jresult = JObject.Parse(response);
             // var j = jresult["issues"][0]["fields"]["project"]["name"];
 

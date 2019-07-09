@@ -87,8 +87,7 @@ function loadchart(obj) {
 
             data.addRows([[uniqueProjectNames[j], count[j]]]);
         }
-        console.log(projectNames);
-        console.log(count[uniqueProjectNames[1]]);
+
 
 
         var options = {
